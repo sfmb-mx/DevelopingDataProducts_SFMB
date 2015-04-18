@@ -1,12 +1,12 @@
 ---
-title       : 
-subtitle    : 
-author      : 
-job         : 
+title       : Developing Data Products Project
+subtitle    : Data Science Specialization
+author      : Sergio-Feliciano Mendoza-Barrera
+job         : Learner
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
-hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
+hitheme     : tomorrow      #
+widgets     : [mathjax, bootstrap]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
@@ -17,10 +17,6 @@ knit        : slidify::knit2slides
 2. Write using R Markdown
 3. Use an empty line followed by three dashes to separate slides!
 
---- .class #id 
+--- .class #id
 
 ## Slide 2
-
-
-
-
