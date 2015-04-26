@@ -68,24 +68,24 @@ applications without web development knowledge.
 
 ## Server code ##
 
-```{r}
-## require(shiny)
-## require(rCharts)
+```{r results = 'HIDE'}
+require(shiny)
+require(rCharts)
 
-## shinyServer(function(input, output, session){
+shinyServer(function(input, output, session){
 
-##     observeEvent(input$SubmitButton, {
+    observeEvent(input$SubmitButton, {
 
-##          output$minibuffer <- renderText("*** Loading Twitter data, please wait...:")
+         output$minibuffer <- renderText("*** Loading Twitter data, please wait...:")
 
-##          output$map_container <- renderMap({
-##              output$minibuffer <- renderText("*** Network map for:")
-##              output$minibufferUser <- renderText(input$userName)
-##              plotMap(input$userName)
+         output$map_container <- renderMap({
+             output$minibuffer <- renderText("*** Network map for:")
+             output$minibufferUser <- renderText(input$userName)
+             plotMap(input$userName)
 
-##      })
-##  })
-## })
+     })
+ })
+})
 ```
 
 --- .segue .quote .dark

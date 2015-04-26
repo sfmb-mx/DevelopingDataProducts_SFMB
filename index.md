@@ -71,23 +71,30 @@ applications without web development knowledge.
 
 
 ```r
-## require(shiny)
-## require(rCharts)
+require(shiny)
+```
 
-## shinyServer(function(input, output, session){
+```
+## Loading required package: shiny
+```
 
-##     observeEvent(input$SubmitButton, {
+```r
+require(rCharts)
 
-##          output$minibuffer <- renderText("*** Loading Twitter data, please wait...:")
+shinyServer(function(input, output, session){
 
-##          output$map_container <- renderMap({
-##              output$minibuffer <- renderText("*** Network map for:")
-##              output$minibufferUser <- renderText(input$userName)
-##              plotMap(input$userName)
+    observeEvent(input$SubmitButton, {
 
-##      })
-##  })
-## })
+         output$minibuffer <- renderText("*** Loading Twitter data, please wait...:")
+
+         output$map_container <- renderMap({
+             output$minibuffer <- renderText("*** Network map for:")
+             output$minibufferUser <- renderText(input$userName)
+             plotMap(input$userName)
+
+     })
+ })
+})
 ```
 
 --- .segue .quote .dark

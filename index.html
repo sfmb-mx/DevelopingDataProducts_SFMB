@@ -115,23 +115,28 @@ you do not have root access.</li>
     <h2>Server code</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">## require(shiny)
-## require(rCharts)
+    <pre><code class="r">require(shiny)
+</code></pre>
 
-## shinyServer(function(input, output, session){
+<pre><code>## Loading required package: shiny
+</code></pre>
 
-##     observeEvent(input$SubmitButton, {
+<pre><code class="r">require(rCharts)
 
-##          output$minibuffer &lt;- renderText(&quot;*** Loading Twitter data, please wait...:&quot;)
+shinyServer(function(input, output, session){
 
-##          output$map_container &lt;- renderMap({
-##              output$minibuffer &lt;- renderText(&quot;*** Network map for:&quot;)
-##              output$minibufferUser &lt;- renderText(input$userName)
-##              plotMap(input$userName)
+    observeEvent(input$SubmitButton, {
 
-##      })
-##  })
-## })
+         output$minibuffer &lt;- renderText(&quot;*** Loading Twitter data, please wait...:&quot;)
+
+         output$map_container &lt;- renderMap({
+             output$minibuffer &lt;- renderText(&quot;*** Network map for:&quot;)
+             output$minibufferUser &lt;- renderText(input$userName)
+             plotMap(input$userName)
+
+     })
+ })
+})
 </code></pre>
 
   </article>
